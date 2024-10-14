@@ -9,6 +9,7 @@ let password;
 let nickname;
 let game_start; // Game start time
 let game_end; // Game end time
+
 // Colors for terminal
 const colors = {
   reset: "\x1b[0m",
