@@ -1,0 +1,182 @@
+/* Defaults */
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+br {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background-color: black;
+}
+
+/* Title */
+#title {
+  height: 15vh;
+  background: linear-gradient(45deg, skyblue, PowderBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Body content */
+#page-container {
+  margin: auto;
+  width: 80vw;
+  height: 100vh;
+  text-align: center;
+  background-color: lightblue;
+}
+
+/* Screen and screen button arrangement layout */
+#inputs {
+  background: linear-gradient(45deg, skyblue, PowderBlue);
+  height: 35vh;
+}
+
+#main,
+#inputs,
+#main-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.screen-button-group {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: space-between;
+}
+.screen-buttons {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+#atm-screen {
+  width: 60vw;
+  height: 50vh;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Button arrangement layout */
+#main-buttons {
+  padding: 2%;
+}
+#keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+#action-button-group {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+/* Button dimensions */
+#keypad,
+#action-button-group {
+  width: 10vw;
+  height: 10vw;
+  min-width: 40px;
+  min-height: 40px;
+  aspect-ratio: 1 / 1;
+}
+#btn-card-slot {
+  width: 15vw;
+  padding: 2%;
+}
+
+/* Button display */
+.screen-button-group button,
+#keypad button,
+#action-button-group button,
+#btn-card-slot {
+  border: 1px solid gray;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.btn-card-active {
+  background-color: blue;
+  color: white;
+}
+#btn-cancel {
+  background-color: red;
+  color: white;
+}
+#btn-clear {
+  background-color: orange;
+}
+#btn-enter {
+  background-color: green;
+  color: white;
+}
+.inactive-buttons {
+  color: gray;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Hover effects for buttons */
+.keypad-buttons:hover,
+.screen-buttons:hover {
+  background-color: darkgray;
+}
+#btn-cancel:hover {
+  background-color: darkred;
+}
+#btn-clear:hover {
+  background-color: darkorange;
+}
+#btn-enter:hover {
+  background-color: darkgreen;
+}
+#btn-card-slot:hover {
+  background-color: darkblue;
+}
+
+/* Overlay images */
+img {
+  position: absolute;
+  width: 60vw;
+  height: 50vh;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Set default for input */
+input {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  pointer-events: none;
+  background-color: transparent;
+  border: none;
+}
+
+/* Error display message */
+.errors {
+  color: red;
+  opacity: 0;
+}
+
+/* Success display message*/
+.success {
+  color: green;
+  opacity: 0;
+}
