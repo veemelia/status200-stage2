@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>ATM Simulator</title>
+  </head>
+  <body>
+    <div id="page-container">
+      <!-- Title -->
+      <div id="title">
+        <h1>ATM Simulator</h1>
+      </div>
+      <!-- Screen Section -->
+      <div id="main">
+        <!-- Left buttons -->
+        <div class="screen-button-group">
+          <button class="screen-buttons">►</button>
+          <button class="screen-buttons">►</button>
+          <button class="screen-buttons">►</button>
+          <button class="screen-buttons" onclick="leftScreenBtn()">►</button>
+        </div>
+        <!-- Screen -->
+        <div id="atm-screen">
+          <img
+            src="https://greaterbank.com/assets/img/slider-bg/Website%20Gold%20Loan%20Picture.jpg"
+            class="ads"
+          />
+          <img
+            src="https://www.creatopy.com/blog/wp-content/uploads/2020/08/Aljazira-Bank-Ads-Examples-600x500.jpg"
+            class="ads"
+          />
+          <img
+            src="https://www.creatopy.com/blog/wp-content/uploads/2020/08/Ad-Example-Bank-Aljazira-600x418.jpg"
+            class="ads"
+          />
+        </div>
+        <!-- Right buttons -->
+        <div class="screen-button-group">
+          <button class="screen-buttons">◄</button>
+          <button class="screen-buttons" onclick="rightScreenBtn(3)">◄</button>
+          <button class="screen-buttons" onclick="rightScreenBtn(2)">◄</button>
+          <button class="screen-buttons" onclick="rightScreenBtn(1)">◄</button>
+        </div>
+      </div>
+
+      <!-- Buttons Section -->
+      <div id="inputs">
+        <div id="main-buttons">
+          <!-- Keypad -->
+          <div id="keypad">
+            <button class="keypad-buttons" onclick="appendNumber(1)">1</button>
+            <button class="keypad-buttons" onclick="appendNumber(2)">2</button>
+            <button class="keypad-buttons" onclick="appendNumber(3)">3</button>
+            <button class="keypad-buttons" onclick="appendNumber(4)">4</button>
+            <button class="keypad-buttons" onclick="appendNumber(5)">5</button>
+            <button class="keypad-buttons" onclick="appendNumber(6)">6</button>
+            <button class="keypad-buttons" onclick="appendNumber(7)">7</button>
+            <button class="keypad-buttons" onclick="appendNumber(8)">8</button>
+            <button class="keypad-buttons" onclick="appendNumber(9)">9</button>
+            <button class="inactive-buttons keypad-buttons"></button>
+            <button class="keypad-buttons" onclick="appendNumber(0)">0</button>
+            <button class="inactive-buttons keypad-buttons"></button>
+          </div>
+          <!-- Action Buttons -->
+          <div id="action-button-group">
+            <button class="action-buttons" id="btn-cancel" onclick="cancel()">
+              CANCEL
+            </button>
+            <button class="action-buttons" id="btn-clear" onclick="backspace()">
+              CLEAR
+            </button>
+            <button class="action-buttons" id="btn-enter" onclick="enter()">
+              ENTER
+            </button>
+            <button class="inactive-buttons action-buttons"></button>
+          </div>
+        </div>
+        <!-- Card Insert Simulator -->
+        <div id="card-slot">
+          <button
+            id="btn-card-slot"
+            class="btn-card-active"
+            onclick="startAtm()"
+          >
+            INSERT CARD
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
